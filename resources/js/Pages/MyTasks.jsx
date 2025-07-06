@@ -10,7 +10,14 @@ const MyTasks = () => {
                 </h2>
             }
         >
-            <div>Hello</div>
+            <div className="py-12">
+                <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div className="flex h-full border border-green-500 space-x-4">
+                        <div className="w-2/3 border border-black p-6 rounded-md">test</div>
+                        <div className="w-1/3 border border-black p-6 rounded-md bg-white shadow-sm">test</div>
+                    </div>
+                </div>
+            </div>
         </AuthenticatedLayout>
     );
 };
