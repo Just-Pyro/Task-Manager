@@ -3,7 +3,7 @@ import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link, usePage } from "@inertiajs/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function AuthenticatedLayout({ header, children }) {
     const user = usePage().props.auth.user;
@@ -11,9 +11,32 @@ export default function AuthenticatedLayout({ header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
+    const [mainHeight, setMainHeight] = useState({});
+    const navRef = useRef(null);
+    const headerRef = useRef(null);
+
+    useEffect(() => {
+        const updateMainHeight = () => {
+            const navHeight = navRef.current ? navRef.current.offsetHeight : 0;
+            const headerHeight = headerRef.current
+                ? headerRef.current.offsetHeight
+                : 0;
+            setMainHeight({
+                height: `calc(100vh - ${navHeight + headerHeight}px)`,
+            });
+        };
+
+        updateMainHeight();
+        window.addEventListener("resize", updateMainHeight);
+
+        return () => {
+            window.removeEventListener("resize", updateMainHeight);
+        };
+    }, []);
+
     return (
-        <div className="min-h-screen bg-gray-100">
-            <nav className="border-b border-gray-100 bg-white">
+        <div className="min-h-screen bg-gray-100 flex flex-col">
+            <nav className="border-b border-gray-100 bg-white" ref={navRef}>
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
@@ -172,14 +195,16 @@ export default function AuthenticatedLayout({ header, children }) {
             </nav>
 
             {header && (
-                <header className="bg-white shadow">
+                <header className="bg-white shadow" ref={headerRef}>
                     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                         {header}
                     </div>
                 </header>
             )}
 
-            <main>{children}</main>
+            <main className="border border-red-500" style={mainHeight}>
+                {children}
+            </main>
         </div>
     );
 }

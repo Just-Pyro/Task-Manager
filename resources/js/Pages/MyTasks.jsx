@@ -10,11 +10,19 @@ const MyTasks = () => {
                 </h2>
             }
         >
-            <div className="py-12">
-                <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="flex h-full border border-green-500 space-x-4">
-                        <div className="w-2/3 border border-black p-6 rounded-md">test</div>
-                        <div className="w-1/3 border border-black p-6 rounded-md bg-white shadow-sm">test</div>
+            <div className="h-full border border-black flex items-center justify-center">
+                <div className="container max-w-7xl h-full border border-yellow-500 flex">
+                    <div className="w-2/3 border border-green-500 flex flex-col p-5">
+                        <div className="flex justify-center">
+                            <div className="bg-white rounded-lg shadow-sm w-full">
+                                Tasks here
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-1/3 border border-blue-500 flex justify-center p-5">
+                        <div className="bg-white rounded-lg shadow-sm w-full">
+                            Filters Here
+                        </div>
                     </div>
                 </div>
             </div>
