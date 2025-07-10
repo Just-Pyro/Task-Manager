@@ -1,4 +1,6 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const MyTasks = () => {
@@ -32,13 +34,44 @@ const MyTasks = () => {
                     </div>
                     <div className="w-1/3 border border-blue-500 flex justify-center p-5">
                         <div className="bg-white rounded-lg shadow-sm w-full p-5">
-                            <div className="border rounded-md">
+                            <div className="border rounded-md mb-5">
                                 <button
                                     type="button"
-                                    className="p-3 w-full hover:bg-gray-200 transition-all text-2xl font-bold"
+                                    className="p-3 w-full h-16 hover:bg-gray-200 transition-all text-lg flex"
                                 >
-                                    CREATE
+                                    <div className="w-1/3 h-full flex items-center justify-center">
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </div>
+                                    <div className="w-2/3 flex h-full items-center">
+
+                                        create task
+                                    </div>
                                 </button>
+                            </div>
+
+                            <div>
+                                <h3 className="text-lg font-bold mb-3">
+                                    Sort Tasks
+                                </h3>
+                                <h4 className="text-base font-semibold mb-2">By Status</h4>
+                                <table className="table-auto">
+                                    <tr>
+                                        <input type="checkbox" name="all" id="all" />
+                                        <label htmlFor="all">All Tasks</label>
+                                    </tr>
+                                    <tr>
+                                        <input type="checkbox" name="pending" id="pending" />
+                                        <label htmlFor="pending">Pending</label>
+                                    </tr>
+                                    <tr>
+                                        <input type="checkbox" name="inprogress" id="inprogress" />
+                                        <label htmlFor="inprogress">In Progress</label>
+                                    </tr>
+                                    <tr>
+                                        <input type="checkbox" name="completed" id="completed" />
+                                        <label htmlFor="completed">Completed</label>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
