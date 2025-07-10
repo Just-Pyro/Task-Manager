@@ -16,7 +16,13 @@ const MyTasks = () => {
                         <div className="flex justify-center">
                             <div className="bg-white rounded-lg shadow-sm w-full p-5">
                                 <div className="">
-                                    <input type="text" name="create_task" id="create_task" placeholder="Type something..." className="px-1 w-full border-0 focus:border-b-2 border-blue-500 focus:ring-0" />
+                                    <input
+                                        type="text"
+                                        name="create_task"
+                                        id="create_task"
+                                        placeholder="Type something..."
+                                        className="px-1 w-full border-0 focus:border-b-2 border-blue-500 focus:ring-0"
+                                    />
                                     <hr />
 
                                     <div className="h-64"></div>
@@ -26,7 +32,14 @@ const MyTasks = () => {
                     </div>
                     <div className="w-1/3 border border-blue-500 flex justify-center p-5">
                         <div className="bg-white rounded-lg shadow-sm w-full p-5">
-                            Filters Here
+                            <div className="border rounded-md">
+                                <button
+                                    type="button"
+                                    className="p-3 w-full hover:bg-gray-200 transition-all text-2xl font-bold"
+                                >
+                                    CREATE
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
