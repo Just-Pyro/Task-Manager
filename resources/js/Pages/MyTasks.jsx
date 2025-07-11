@@ -2,6 +2,7 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import CustomDatePicker from "@/Components/CustomDatePicker";
 
 const MyTasks = () => {
     return (
@@ -33,7 +34,7 @@ const MyTasks = () => {
                         </div>
                     </div>
                     <div className="w-1/3 border border-blue-500 flex justify-center p-5">
-                        <div className="bg-white rounded-lg shadow-sm w-full p-5">
+                        <div className="bg-white rounded-lg shadow-sm w-full p-5 flex flex-col">
                             <div className="border rounded-md mb-5">
                                 <button
                                     type="button"
@@ -43,7 +44,6 @@ const MyTasks = () => {
                                         <FontAwesomeIcon icon={faPlus} />
                                     </div>
                                     <div className="w-2/3 flex h-full items-center">
-
                                         create task
                                     </div>
                                 </button>
@@ -53,25 +53,93 @@ const MyTasks = () => {
                                 <h3 className="text-lg font-bold mb-3">
                                     Sort Tasks
                                 </h3>
-                                <h4 className="text-base font-semibold mb-2">By Status</h4>
-                                <table className="table-auto">
+
+                                {/* <h4 className="text-base font-semibold mb-2">
+                                    By Status
+                                </h4> */}
+
+                                <table className="table-auto w-full">
                                     <tr>
-                                        <input type="checkbox" name="all" id="all" />
-                                        <label htmlFor="all">All Tasks</label>
+                                        <td className="w-2/3 flex text-lg">
+                                            <div className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    name="all"
+                                                    id="all"
+                                                />
+                                            </div>
+                                            <label
+                                                htmlFor="all"
+                                                className="ms-3 select-none"
+                                            >
+                                                All Tasks
+                                            </label>
+                                        </td>
+                                        <td className="w-1/3">(12340)</td>
                                     </tr>
                                     <tr>
-                                        <input type="checkbox" name="pending" id="pending" />
-                                        <label htmlFor="pending">Pending</label>
+                                        <td className="w-2/3 flex text-lg">
+                                            <div className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    name="pending"
+                                                    id="pending"
+                                                />
+                                            </div>
+                                            <label
+                                                htmlFor="pending"
+                                                className="ms-3 select-none"
+                                            >
+                                                Pending
+                                            </label>
+                                        </td>
+                                        <td className="w-1/3">(053423)</td>
                                     </tr>
                                     <tr>
-                                        <input type="checkbox" name="inprogress" id="inprogress" />
-                                        <label htmlFor="inprogress">In Progress</label>
+                                        <td className="w-2/3 flex text-lg">
+                                            <div className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    name="inprogress"
+                                                    id="inprogress"
+                                                />
+                                            </div>
+                                            <label
+                                                htmlFor="inprogress"
+                                                className="ms-3 select-none"
+                                            >
+                                                In Progress
+                                            </label>
+                                        </td>
+                                        <td className="w-1/3">(035)</td>
                                     </tr>
                                     <tr>
-                                        <input type="checkbox" name="completed" id="completed" />
-                                        <label htmlFor="completed">Completed</label>
+                                        <td className="w-2/3 flex text-lg">
+                                            <div className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    name="completed"
+                                                    id="completed"
+                                                />
+                                            </div>
+                                            <label
+                                                htmlFor="completed"
+                                                className="ms-3 select-none"
+                                            >
+                                                Completed
+                                            </label>
+                                        </td>
+                                        <td className="w-1/3">(0)</td>
                                     </tr>
                                 </table>
+                            </div>
+
+                            <div className="mt-5 border flex-1">
+                                <h3 className="text-lg font-bold mb-2">
+                                    History
+                                </h3>
+
+                                <CustomDatePicker />
                             </div>
                         </div>
                     </div>
