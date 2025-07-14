@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    /* .react-calendar .react-calendar__navigation {
+        @apply flex justify-center bg-zinc-50;
+    }
+
+    .react-calendar .react-calendar__navigation__prev2-button,
+    .react-calendar .react-calendar__navigation__prev-button,
+    .react-calendar .react-calendar__navigation__next2-button,
+    .react-calendar .react-calendar__navigation__next-button {
+        @apply w-1/12 hover:bg-zinc-200 transition-all;
+    } */
+}

@@ -1,10 +1,12 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { useContext } from "react";
 import CustomDatePicker from "@/Components/CustomDatePicker";
+import { MainContext } from "@/Provider/MainProvider";
 
 const MyTasks = () => {
+    const { setOpenModal } = useContext(MainContext);
     return (
         <AuthenticatedLayout
             header={
@@ -39,6 +41,7 @@ const MyTasks = () => {
                                 <button
                                     type="button"
                                     className="p-3 w-full h-16 hover:bg-gray-200 transition-all text-lg flex"
+                                    onClick={() => setOpenModal(true)}
                                 >
                                     <div className="w-1/3 h-full flex items-center justify-center">
                                         <FontAwesomeIcon icon={faPlus} />
@@ -134,11 +137,10 @@ const MyTasks = () => {
                                 </table>
                             </div>
 
-                            <div className="mt-5 border flex-1">
-                                <h3 className="text-lg font-bold mb-2">
-                                    History
-                                </h3>
-
+                            <h3 className="text-lg font-bold mb-2 mt-5">
+                                History
+                            </h3>
+                            <div className="flex-1 overflow-y-auto">
                                 <CustomDatePicker />
                             </div>
                         </div>
