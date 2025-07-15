@@ -13,4 +13,19 @@
     .react-calendar .react-calendar__navigation__next-button {
         @apply w-1/12 hover:bg-zinc-200 transition-all;
     } */
+    .pending {
+        @apply bg-amber-300;
+    }
+
+    .inprogress {
+        @apply bg-cyan-300;
+    }
+
+    .completed {
+        @apply bg-green-300;
+    }
+
+    .task-status-btn {
+        @apply border px-3 py-1 rounded shadow-sm hover:opacity-75;
+    }
 }
