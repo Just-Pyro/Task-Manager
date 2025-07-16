@@ -24,14 +24,22 @@ const FormModal = () => {
                 {/* Modal */}
                 <div className="bg-white rounded-md p-7 w-[500px]">
                     <form action="" className="flex flex-col gap-3">
+                        <label htmlFor="task">Task</label>
                         <textarea
                             type="text"
                             name="task"
                             id="task"
                             placeholder="Type here..."
+                            rows={5}
+                            className="resize-none"
                         />
                         <label htmlFor="etc">Due date</label>
-                        <input type="time" name="etc" id="etc" />
+                        <div className="flex justify-between">
+                            <input type="time" name="etc" id="etc" />
+                            <button type="button" className="submit-task-btn">
+                                Submit
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

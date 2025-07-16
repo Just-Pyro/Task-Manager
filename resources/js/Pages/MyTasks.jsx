@@ -21,20 +21,22 @@ const MyTasks = () => {
 
                         <div className="pending rounded-md shadow-sm mx-5 overflow-hidden">
                             <div className="w-[99.5%] h-full bg-white p-5 flex">
-                                <div className="w-3/4">
-                                    Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Quos tempore, culpa
-                                    voluptas repellendus facilis nulla rerum
-                                    voluptatibus molestias numquam soluta maxime
-                                    suscipit nemo quasi pariatur a? Minus esse
-                                    magni eligendi?
+                                <div className="w-3/4 flex items-center">
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Quos tempore, culpa
+                                        voluptas repellendus facilis nulla rerum
+                                        voluptatibus molestias numquam soluta
+                                        maxime suscipit nemo quasi pariatur a?
+                                        Minus esse magni eligendi?
+                                    </p>
                                 </div>
                                 <div className="w-1/4 border flex items-center justify-center">
                                     <button
                                         type="button"
                                         className="task-status-btn"
                                     >
-                                        start
+                                        Start
                                     </button>
                                 </div>
                             </div>
@@ -42,40 +44,50 @@ const MyTasks = () => {
 
                         <div className="inprogress rounded-md shadow-sm mx-5 overflow-hidden">
                             <div className="w-[99.5%] h-full bg-white p-5 flex">
-                                <div className="w-3/4">
-                                    Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Quos tempore, culpa
-                                    voluptas repellendus
+                                <div className="w-3/4 flex items-center">
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Quos tempore, culpa
+                                        voluptas repellendus
+                                    </p>
                                 </div>
                                 <div className="w-1/4 border flex items-center justify-center">
                                     <button
                                         type="button"
                                         className="task-status-btn"
                                     >
-                                        start
+                                        Start
                                     </button>
+                                    {/* <button
+                                        type="button"
+                                        className="task-status-btn done-btn"
+                                    >
+                                        Done
+                                    </button> */}
                                 </div>
                             </div>
                         </div>
 
                         <div className="completed rounded-md shadow-sm mx-5 overflow-hidden">
                             <div className="w-[99.5%] h-full bg-white p-5 flex">
-                                <div className="w-3/4">
-                                    Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Quos tempore, culpa
+                                <div className="w-3/4 flex items-center">
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Quos tempore, culpa
+                                    </p>
                                 </div>
                                 <div className="w-1/4 border flex items-center justify-center">
                                     <button
                                         type="button"
                                         className="task-status-btn"
                                     >
-                                        start
+                                        Start
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/3 flex flex-col h-full overflow-y-auto overflow-x-hidden test edit">
+                    <div className="w-1/3 flex flex-col h-full overflow-y-auto overflow-x-hidden">
                         <RightPanel />
                     </div>
                 </div>

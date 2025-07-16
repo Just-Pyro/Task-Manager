@@ -9,20 +9,18 @@ const RightPanel = () => {
     return (
         <>
             {/* Create Button */}
-            <div className="rounded-md m-5 bg-white shadow-sm">
-                <button
-                    type="button"
-                    className="p-3 w-full h-16 hover:bg-gray-200 transition-all text-lg flex"
-                    onClick={() => setOpenModal(true)}
-                >
-                    <div className="w-1/3 h-full flex items-center justify-center">
-                        <FontAwesomeIcon icon={faPlus} />
-                    </div>
-                    <div className="w-2/3 flex h-full items-center">
-                        create task
-                    </div>
-                </button>
-            </div>
+            <button
+                type="button"
+                className="create-task-btn"
+                onClick={() => setOpenModal(true)}
+            >
+                <div className="w-1/3 h-full flex items-center justify-center">
+                    <FontAwesomeIcon icon={faPlus} />
+                </div>
+                <div className="w-2/3 flex h-full items-center">
+                    create task
+                </div>
+            </button>
 
             {/* Sort Tasks */}
             <div className="bg-white m-5 rounded-md shadow-sm p-5">
