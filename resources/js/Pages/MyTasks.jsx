@@ -75,7 +75,7 @@ const MyTasks = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/3 flex flex-col h-full overflow-y-auto overflow-x-hidden">
+                    <div className="w-1/3 flex flex-col h-full overflow-y-auto overflow-x-hidden test edit">
                         <RightPanel />
                     </div>
                 </div>
