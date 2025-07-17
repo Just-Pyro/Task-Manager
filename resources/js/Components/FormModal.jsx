@@ -1,11 +1,18 @@
 import { MainContext } from "@/Provider/MainProvider";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 const FormModal = () => {
     const [task, setTask] = useState("");
-    const [dueDate, setDueDate] = useState();
+    const [dueTime, setDueTime] = useState("");
 
     const { setOpenModal } = useContext(MainContext);
+
+    useEffect(() => {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        setDueTime(`${hours}:${minutes}`);
+    }, []);
 
     return (
         <>
@@ -24,18 +31,29 @@ const FormModal = () => {
                 {/* Modal */}
                 <div className="bg-white rounded-md p-7 w-[500px]">
                     <form action="" className="flex flex-col gap-3">
-                        <label htmlFor="task">Task</label>
+                        <label htmlFor="task" className="text-lg font-semibold">
+                            Task
+                        </label>
                         <textarea
                             type="text"
                             name="task"
                             id="task"
+                            className="form-field resize-none"
                             placeholder="Type here..."
                             rows={5}
-                            className="resize-none"
                         />
-                        <label htmlFor="etc">Due date</label>
+                        <label htmlFor="etc" className="text-lg font-semibold">
+                            Due date
+                        </label>
                         <div className="flex justify-between">
-                            <input type="time" name="etc" id="etc" />
+                            <input
+                                type="time"
+                                name="etc"
+                                id="etc"
+                                className="form-field"
+                                onChange={(e) => setDueTime(e.target.value)}
+                                value={dueTime}
+                            />
                             <button type="button" className="submit-task-btn">
                                 Submit
                             </button>

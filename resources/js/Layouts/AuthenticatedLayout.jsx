@@ -206,7 +206,7 @@ export default function AuthenticatedLayout({ header, children }) {
                 </header>
             )}
 
-            <main className="border border-red-500" style={mainHeight}>
+            <main className="" style={mainHeight}>
                 {children}
             </main>
 

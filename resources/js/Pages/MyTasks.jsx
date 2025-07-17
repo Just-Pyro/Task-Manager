@@ -12,9 +12,9 @@ const MyTasks = () => {
                 </h2>
             }
         >
-            <div className="h-full border border-black flex items-center justify-center">
-                <div className="container max-w-7xl h-full border border-yellow-500 flex">
-                    <div className="w-2/3 border border-green-500 flex flex-col space-y-4">
+            <div className="h-full flex items-center justify-center">
+                <div className="container max-w-7xl h-full flex">
+                    <div className="w-2/3 flex flex-col space-y-4">
                         <div className="bg-white rounded-md shadow-sm p-5 m-5 mb-0">
                             <h3 className="text-lg font-bold">Today</h3>
                         </div>
@@ -31,7 +31,7 @@ const MyTasks = () => {
                                         Minus esse magni eligendi?
                                     </p>
                                 </div>
-                                <div className="w-1/4 border flex items-center justify-center">
+                                <div className="w-1/4 flex items-center justify-center">
                                     <button
                                         type="button"
                                         className="task-status-btn"
@@ -51,7 +51,7 @@ const MyTasks = () => {
                                         voluptas repellendus
                                     </p>
                                 </div>
-                                <div className="w-1/4 border flex items-center justify-center">
+                                <div className="w-1/4 flex items-center justify-center">
                                     <button
                                         type="button"
                                         className="task-status-btn"
@@ -76,7 +76,7 @@ const MyTasks = () => {
                                         adipisicing elit. Quos tempore, culpa
                                     </p>
                                 </div>
-                                <div className="w-1/4 border flex items-center justify-center">
+                                <div className="w-1/4 flex items-center justify-center">
                                     <button
                                         type="button"
                                         className="task-status-btn"
