@@ -1,5 +1,6 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Head } from '@inertiajs/react';
+import TaskList from "@/Components/TaskList";
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
+import { Head } from "@inertiajs/react";
 
 export default function Dashboard() {
     return (
@@ -14,11 +15,13 @@ export default function Dashboard() {
 
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg">
+                    {/* <div className="overflow-hidden border border-black bg-white shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900">
                             No tasks created today!
                         </div>
-                    </div>
+                    </div> */}
+
+                    <TaskList page={"dashboard"} />
                 </div>
             </div>
         </AuthenticatedLayout>
