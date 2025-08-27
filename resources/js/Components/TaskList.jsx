@@ -33,7 +33,7 @@ const TaskList = ({ page }) => {
                         </div>
                         <div className="w-1/4 flex items-center justify-center">
                             <button type="button" className="task-status-btn">
-                                {isDashboard ? "Start" : "Edit"}
+                                Start
                             </button>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ const TaskList = ({ page }) => {
                         </div>
                         <div className="w-1/4 flex items-center justify-center">
                             <button type="button" className="task-status-btn">
-                                {isDashboard ? "Start" : "Edit"}
+                                Start
                             </button>
                             {/* <button
                                         type="button"
@@ -72,7 +72,7 @@ const TaskList = ({ page }) => {
                         </div>
                         <div className="w-1/4 flex items-center justify-center">
                             <button type="button" className="task-status-btn">
-                                {isDashboard ? "Start" : "Edit"}
+                                Start
                             </button>
                         </div>
                     </div>
